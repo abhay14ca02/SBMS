@@ -5,7 +5,7 @@ public class Restaurant {
 	private IPayment iPayment;
 
 	public Restaurant() {
-		System.out.println("Restaurant:: 0 Param Constructor");
+		System.out.println("Restaurant :: 0 Param Constructor");
 	}
 
 	// CI
