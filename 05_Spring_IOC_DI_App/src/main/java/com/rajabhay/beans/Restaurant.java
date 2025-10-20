@@ -10,7 +10,7 @@ public class Restaurant {
 
 	// CI
 	public Restaurant(IPayment payment) {
-		System.out.println("Restaurant:: Param Constructor");
+		System.out.println("Restaurant :: Param Constructor");
 		this.iPayment = payment;
 	}
 
