@@ -21,8 +21,7 @@ public class BookService {
 	}
 
 	public void saveBook() throws IOException {
-		File f = new File("C:\\Users\\abharatkumar\\OneDrive - e2open, LLC\\Desktop\\Books.txt");
-		System.out.println("Book" + f);
+		File f = new File("Books.txt");
 
 		FileReader fr = new FileReader(f);
 
@@ -49,5 +48,6 @@ public class BookService {
 			// read linext line
 			line = br.readLine();
 		}
+		br.close();
 	}
 }
