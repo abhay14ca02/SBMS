@@ -19,7 +19,7 @@ public class ATM {
 	}
 
 	public void withdraw() {
-		System.out.println("withdraw successfull..");
+		System.out.println("withdraw successful..");
 		printer.print();
 	}
 }
