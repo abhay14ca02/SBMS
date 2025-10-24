@@ -3,22 +3,26 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	
 	<bean id="ds"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="oracle.jdbc.OracleDriver" />
-		<property name="url" value="jdbc:oracle:thin:@//dc19sc3p.dev.e2open.com:1521/dv19sc3p" />
+		<property name="url"
+			value="jdbc:oracle:thin:@//dc19sc3p.dev.e2open.com:1521/dv19sc3p" />
 		<property name="username" value="MOTOSCDEV3_e2sc_adm" />
 		<property name="password" value="m3GW5CPcXFd7VHs" />
 	</bean>
 	<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
 		<property name="dataSource" ref="ds" />
 	</bean>
-	<bean id="bd" class="com.rajabhay.beans.BookDAO">
+	<bean id="bd" class="com.rajabhay.daoimpl.BookDaoImpl">
 		<property name="jdbcTemplate" ref="jt" />
 	</bean>
-	<bean id="bookservice" class="com.rajabhay.beans.BookService">
-	<property name="bookDAO" ref="bd"/>
+	<bean id="bs" class="com.rajabhay.serviceimpl.BookServiceImpl">
+		<property name="bookDao" ref="bd" />
 	</bean>
+	<bean id="excel" class="com.rajabhay.excelgenerator.ExcelGenerator"/>
+	<bean id="pdf" class="com.rajabhay.pdfgenerator.PdfGenerator"/>
+	<bean id="controller" class="com.rajabhay.controller.BookController"
+		autowire="constructor" />
 
 </beans>

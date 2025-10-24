@@ -1,0 +1,5 @@
+101, C, Dennis, 1000.00
+102, Java, James, 5000.00
+103, Python, Xyz, 5000.00
+104, Spring, Rod, 5000.00
+105, English, Abc, 5000.00
