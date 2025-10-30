@@ -28,6 +28,7 @@ public class User {
 	private String city;
 	private String country;
 
+	
 	@CreationTimestamp // populate record created date
 	@Column(updatable = false) // It will not update value in lastUpdatedDate, when we create a record.
 	private LocalDate createdDate;
