@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: 35_SB_BookRestAPI_CrudApp
+
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: jdbc:oracle:thin:@//dc19sc3p.dev.e2open.com:1521/dv19sc3p
+    username: MOTOSCDEV3_e2sc_adm
+    password: m3GW5CPcXFd7VHs
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        default_schema: MOTOSCDEV3_e2sc_adm
