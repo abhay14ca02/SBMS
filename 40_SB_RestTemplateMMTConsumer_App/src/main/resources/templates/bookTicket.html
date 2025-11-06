@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Book Ticket App</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+	<style>
+		.error {
+			color: red;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container mt-5 mb-5">
+		<h2>Book Ticket Page Design</h2>
+		<p th:text="${successmsg}"></p>
+
+		<form th:action="@{/ticket}" th:object="${ticket}" method="post">
+			<table>
+				<tr>
+					<td>Passenger Name : </td>
+					<td><input type="text" th:field="*{passengerName}" /></td>
+
+					<input type="hidden" th:field="*{ticketId}" />
+
+					<td>
+						<p th:if="${#fields.hasErrors('passengerName')}" th:errorclass="error" th:errors="*{passengerName}" />
+					</td>
+				</tr>
+				<tr>
+					<td>Age : </td>
+					<td><input type="number" th:field="*{age}" /></td>
+					<td>
+						<p th:if="${#fields.hasErrors('age')}" th:errorclass="error" th:errors="*{age}" />
+					</td>
+				</tr>
+				<tr>
+					<td>Email : </td>
+					<td><input type="email" th:field="*{email}" /></td>
+					<td>
+						<p th:if="${#fields.hasErrors('email')}" th:errorclass="error" th:errors="*{email}" />
+					</td>
+				</tr>
+				<tr>
+					<td>Gender : </td>
+					<td><input type="text" th:field="*{gender}" /></td>
+					<td>
+						<p th:if="${#fields.hasErrors('gender')}" th:errorclass="error" th:errors="*{gender}" />
+					</td>
+				</tr>
+				<tr>
+					<td>From Station : </td>
+					<td><input type="text" th:field="*{fromStation}" /></td>
+					<td>
+						<p th:if="${#fields.hasErrors('fromStation')}" th:errorclass="error" th:errors="*{fromStation}" />
+					</td>
+				</tr>
+				
+				<tr>
+					<td>To Station : </td>
+					<td><input type="text" th:field="*{toStation}" /></td>
+					<td>
+						<p th:if="${#fields.hasErrors('toStation')}" th:errorclass="error" th:errors="*{toStation}" />
+					</td>
+				</tr>
+				
+				<tr>
+					<td>Travel Date : </td>
+					<td><input type="date" th:field="*{travelDate}" /></td>
+					<td>
+						<p th:if="${#fields.hasErrors('travelDate')}" th:errorclass="error" th:errors="*{travelDate}" />
+					</td>
+				</tr>
+				<tr>
+					<td>Train Number : </td>
+					<td><input type="text" th:field="*{trainNumber}" /></td>
+					<td>
+						<p th:if="${#fields.hasErrors('trainNumber')}" th:errorclass="error" th:errors="*{trainNumber}" />
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Save" class="btn btn-primary" /></td>
+				</tr>
+			</table>
+		</form>
+		<a href="tickets">View All Tickets</a>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
