@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.rajabhay</groupId>
-	<artifactId>34_SB_ProductRestAPI_App2</artifactId>
+	<artifactId>36_SB_RestTemplateConsumer_App</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>34_SB_ProductRestAPI_App2</name>
-	<description>34_SB_ProductRestAPI_App2</description>
+	<name>36_SB_RESTTemplateConsumer_App</name>
+	<description>36_SB_RestTemplateConsumer_App</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -50,16 +50,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.dataformat</groupId>
-			<artifactId>jackson-dataformat-xml</artifactId>
-		</dependency>
-		
-		<dependency>
-		    <groupId>org.springdoc</groupId>
-		    <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-		    <version>2.7.0</version>
 		</dependency>
 	</dependencies>
 
