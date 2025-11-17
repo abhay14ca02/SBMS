@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: 52_SB_Read_Props
+msg: Good Morning !!!
+app:
+  messages:
+    greet_msg: Have a nice day ahead!!!
+    welcome_msg: Welcome to SBMS...
+    login_error: Invalid Credentials
+    register_error: Registration Failed
+    register_success: Registration Successful
+    register_dup_email: Duplicate Email found
+    book_create_success: Book Inserted Successfully
+server:
+  port: 8082

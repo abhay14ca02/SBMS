@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: 49_SB_Cloud_Config_Server
+  cloud:
+   config:
+    server:
+      git:
+        uri: https://github.com/abhay14ca02/configuration_properties
+
+server:
+  port: 9093
+ 
